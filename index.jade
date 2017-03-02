@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Web Chat Concept
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='main.css')
+  body
+    #app
+      .col-md-2.userlist
+        .panel-heading
+          span.glyphicon.glyphicon-user
+          |  Online ({{ connectedUsers.length }})
+        ul.chat(id="first")
+          li(v-for='user in connectedUsers')
+            | {{ user }}&nbsp;
+            span.glyphicon.glyphicon-pencil(v-if='userIsTyping(user)') ...
+        .close-icon
+      .col-md-10
+        #livechat-container
+          .panel.panel-primary
+            .panel-heading(class="one")
+              span.glyphicon.glyphicon-comment
+              |  &nbsp;Lets Chat
+            .panel-body
+              ul#messages.chat
+                li.left.clearfix(v-for='message in messages')
+                  .info(v-if="message.type == 'info'")  {{ message.msg }}
+                  div(v-if="message.type == 'chat'")
+                    span.chat-img.pull-left
+                      img.img-circle(src='http://i.imgur.com/iWKad22.jpg', alt='User Avatar')
+                    .chat-body.clearfix
+                      .header
+                        strong.primary-font {{ message.user }}
+                        small.pull-right.text-muted
+                          span.glyphicon.glyphicon-time
+                          |  &nbsp;{{ message.timestamp }}
+                      p.message-text {{ message.text }}
+            .panel-footer
+              form(@submit.prevent='send')
+                .inputDiv
+                  .imageDiv
+                  input(v-model='message.text', v-on:keyup='usersAreTyping', v-on:keyup.13="stoppedTyping('13')", v-on:keyup.8="stoppedTyping('8')", type='text', placeholder="Submit Message")
+                //- img(class="send-button" src="images/export.svg")
+    script(src='https://cdn.socket.io/socket.io-1.4.5.js')
+    script(src='https://unpkg.com/vue/dist/vue.js')
+    script(src='https://unpkg.com/axios/dist/axios.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='client.js')
+    script(src='script.js')

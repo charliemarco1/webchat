@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Amiko");
+body, html {
+  overflow: hidden;
+  height: 100vh; }
+
+#livechat-container {
+  width: 100%; }
+
+.panel-heading {
+  transition: 1s; }
+
+.userlist {
+  position: relative;
+  height: 1500px;
+  left: 0;
+  border: 1px solid dimgray;
+  color: white;
+  background: #2E3136;
+  font-family: 'Amiko';
+  border-right: 1px soid rgba(157, 164, 167, 0.3);
+  transition: 1s;
+  width: 16%; }
+  .userlist ul {
+    font-size: 12px;
+    transition: 1s; }
+
+.userlist::-webkit-scrollbar, .panel-body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #2E3136; }
+
+.userlist::-webkit-scrollbar-thumb, .panel-body::-webkit-scrollbar-thumb {
+  background-color: dimgray;
+  height: 10px;
+  border-radius: 10px;
+  border: 2px solid #36393E; }
+
+.userlist::-webkit-scrollbar-track, .panel-body::-webkit-scrollbar-track {
+  background-color: #2E3136; }
+
+.close-icon {
+  position: absolute;
+  z-index: 100;
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  background: dimgray;
+  background-image: url(images/next.svg);
+  background-repeat: no-repeat;
+  background-position: 5px 4px;
+  transform: rotate(180deg);
+  right: -14px;
+  bottom: 1200px;
+  cursor: pointer;
+  transition: 1s; }
+
+.one {
+  display: none; }
+
+.info {
+  font-size: 12px;
+  font-style: italic;
+  margin: 10px; }
+
+.panel-heading {
+  color: rgba(157, 164, 167, 0.9); }
+
+.panel {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 1500px;
+  background: #36393E;
+  border: none;
+  border-radius: 0;
+  color: #AAABA7;
+  transition: .8s; }
+
+.col-md-10 {
+  padding: 0;
+  margin: 0;
+  width: 84%; }
+
+#chat-input {
+  width: 100%; }
+
+.chat {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(157, 164, 167, 0.3); }
+    .chat li.left .chat-body {
+      margin-left: 60px; }
+    .chat li.right .chat-body {
+      margin-right: 60px; }
+    .chat li .chat-body p {
+      margin: 0;
+      color: white; }
+
+.panel-footer {
+  margin-top: 75px;
+  background: #36393E;
+  border-top: 1px solid rgba(157, 164, 167, 0.3); }
+
+.inputDiv {
+  width: 80%;
+  height: 45px;
+  display: flex;
+  position: relative;
+  background: #424549;
+  border-radius: 3px;
+  border: 2px solid rgba(218, 221, 223, 0.5);
+  margin: 0 auto; }
+  .inputDiv .imageDiv {
+    position: relative;
+    background-image: url(images/export.svg);
+    background-repeat: no-repeat;
+    background-position: 3px 3px;
+    height: 100%;
+    width: 40px;
+    border-right: 2px solid rgba(218, 221, 223, 0.5);
+    transition: 100ms; }
+    .inputDiv .imageDiv:hover {
+      background: rgba(218, 221, 223, 0.2);
+      background-image: url(images/export.svg);
+      background-repeat: no-repeat;
+      background-position: 3px 3px; }
+  .inputDiv input {
+    width: 100%;
+    background: #424549;
+    border: none;
+    text-indent: 10px;
+    color: white;
+    letter-spacing: 1px; }
+  .inputDiv input:focus {
+    outline: none; }
+
+.primary-font {
+  color: #A9FD00; }
+
+p.message-text {
+  color: white; }
+
+.panel-body {
+  overflow-y: scroll;
+  height: 700px; }
+
+.img-circle {
+  height: 52px;
+  width: 52px; }
+
+.animated-left {
+  width: 1%; }
+
+.increase-width {
+  width: 116%; }
+
+.rotate-icon {
+  transform: rotate(360deg); }
+
+.display-none {
+  display: none; }

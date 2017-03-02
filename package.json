@@ -1,0 +1,23 @@
+{
+  "name": "chatty",
+  "version": "1.0.0",
+  "description": "chatroom application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "room"
+  ],
+  "author": "me",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "flightplan": "^0.6.15",
+    "fly": "^2.0.5"
+  }
+}
