@@ -5,7 +5,7 @@ var port = process.env.PORT || 3000;
 
 var io = require('socket.io')(server);
 
-server.listen(port, function () {
+server.listen(3000, function () {
     console.log("Listening on *:" + port);
 });
 
