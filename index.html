@@ -13,8 +13,7 @@
         <ul id="first" class="chat">
           <li v-for="user in connectedUsers">{{ user }}&nbsp;<span v-if="userIsTyping(user)" class="glyphicon glyphicon-pencil">...</span></li>
         </ul>
-        <div class="close-icon">
-        </div>
+        <div class="close-icon"></div>
       </div>
       <div class="col-md-10">
         <div id="livechat-container">
@@ -45,7 +44,7 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="138.197.32.211:3000/socket.io/socket.io.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
