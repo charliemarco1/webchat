@@ -5,9 +5,11 @@ var port = process.env.PORT || 3000;
 
 var io = require('socket.io')(server);
 
-server.listen(port, function () {
-    console.log("Listening on *:" + port);
-});
+server.listen(3000,'138.197.32.211');
+
+// server.listen(port, function () {
+//     console.log("Listening on *:" + port);
+// });
 
 app.use(express.static(__dirname));
 

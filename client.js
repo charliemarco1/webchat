@@ -1,4 +1,4 @@
-var socket = io.connect("http://138.197.32.211:3000");
+var socket = io("http://138.197.32.211:3000");
 
     new Vue({
         el: '#app',
